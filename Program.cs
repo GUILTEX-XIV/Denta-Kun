@@ -6,31 +6,51 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            // Declare variables and then initialize to zero.
-            int num1 = 0; int num2 = 0;
+            // たぶんこれが変数を宣言しているとおもわれる
+            int num1 = 0; int num2 = 0; int num3 = 0;
 
-            // Display title as the C# console calculator app.
+            // デンタ君はc#によるコンソール計算機
             Console.WriteLine("Denta-Kun\r");
             Console.WriteLine("Console Calculator in C#\r");
             Console.WriteLine("------------------------\n");
 
-            // Ask the user to type the first number.
+            // 最初の数字
             Console.WriteLine("ナンバーを入力せよ、そしてエンターを押せ。");
             num1 = Convert.ToInt32(Console.ReadLine());
 
-            // Ask the user to type the second number.
+
+
+            // ここで記号をいれて計算させたい。
+            /*
+             *num3 = Convert.ToInt32(Console.ReadLine());
+             */
+
+
+
+            // 2番目の数字
             Console.WriteLine("さらにナンバーを入力せよ、エンターも押せ。");
             num2 = Convert.ToInt32(Console.ReadLine());
 
-            // Ask the user to choose an option.
-            Console.WriteLine("これだけあれば十分だと思われる4種を用意した。");
+            /*
+             if num3 が「+」のときは
+                    Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
+                       「-」のとき
+                       「*」のとき
+                       「/」のとき
+            */
+
+            // たすのかひくのかそれとも、わるのか
             Console.WriteLine("\tt - たす");
             Console.WriteLine("\th - ひく");
             Console.WriteLine("\tk - かける");
             Console.WriteLine("\tw - わる");
             Console.Write("ご希望の計算方法を選択しなさい。そしてエンターを押せ。");
 
-            // Use a switch statement to do the math.
+
+
+
+
+            // 入力したキーによる分岐
             switch (Console.ReadLine())
             {
                 case "t":
@@ -46,7 +66,7 @@ namespace Calculator
                     Console.WriteLine($"Your result: {num1} / {num2} = " + (num1 / num2));
                     break;
             }
-            // Wait for the user to respond before closing.
+            // 何か押せばおわる
             Console.Write("Press any key to close the Calculator console app...");
             Console.ReadKey();
         }
