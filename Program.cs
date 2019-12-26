@@ -15,54 +15,39 @@ namespace Calculator
             Console.WriteLine("------------------------\n");
 
             // 最初の数字
-            Console.WriteLine("ナンバーを入力せよ、そしてエンターを押せ。");
+            Console.WriteLine("input number 1");
             num1 = Convert.ToInt32(Console.ReadLine());
 
 
 
             // ここで記号をいれて計算させたい。
-            /*
-             *num3 = Convert.ToInt32(Console.ReadLine());
-             */
+            Console.WriteLine("select option");
+            Console.WriteLine("\t1 - たす");
+            Console.WriteLine("\t2 - ひく");
+            Console.WriteLine("\t3 - かける");
+            Console.WriteLine("\t4 - わる");
+            num3 = Convert.ToInt32(Console.ReadLine());
 
 
 
             // 2番目の数字
-            Console.WriteLine("さらにナンバーを入力せよ、エンターも押せ。");
+            Console.WriteLine("input number 2");
             num2 = Convert.ToInt32(Console.ReadLine());
-
-            /*
-             if num3 が「+」のときは
-                    Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
-                       「-」のとき
-                       「*」のとき
-                       「/」のとき
-            */
-
-            // たすのかひくのかそれとも、わるのか
-            Console.WriteLine("\tt - たす");
-            Console.WriteLine("\th - ひく");
-            Console.WriteLine("\tk - かける");
-            Console.WriteLine("\tw - わる");
-            Console.Write("ご希望の計算方法を選択しなさい。そしてエンターを押せ。");
-
-
-
 
 
             // 入力したキーによる分岐
-            switch (Console.ReadLine())
+            switch (num3)
             {
-                case "t":
+                case 1:
                     Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
                     break;
-                case "h":
+                case 2:
                     Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
                     break;
-                case "k":
+                case 3:
                     Console.WriteLine($"Your result: {num1} * {num2} = " + (num1 * num2));
                     break;
-                case "w":
+                case 4:
                     Console.WriteLine($"Your result: {num1} / {num2} = " + (num1 / num2));
                     break;
             }
