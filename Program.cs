@@ -6,28 +6,24 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            // たぶんこれが変数を宣言しているとおもわれる
-            int num1 = 0; int num2 = 0; int num3 = 0;
+            // 変数を宣言
+            float num1 =0; float num2 = 0; string ope = null;
 
-            // デンタ君はc#によるコンソール計算機
+            // c#によるコンソール計算機
             Console.WriteLine("Denta-Kun\r");
             Console.WriteLine("Console Calculator in C#\r");
             Console.WriteLine("------------------------\n");
+
 
             // 最初の数字
             Console.WriteLine("input number 1");
             num1 = Convert.ToInt32(Console.ReadLine());
 
 
-
-            // ここで記号をいれて計算させたい。
-            Console.WriteLine("select option");
-            Console.WriteLine("\t1 - たす");
-            Console.WriteLine("\t2 - ひく");
-            Console.WriteLine("\t3 - かける");
-            Console.WriteLine("\t4 - わる");
-            num3 = Convert.ToInt32(Console.ReadLine());
-
+            // オペレーションの選択肢を表示
+            Console.WriteLine("select operation");
+            Console.WriteLine("(+|-|*|/)");
+            ope = Console.ReadLine();
 
 
             // 2番目の数字
@@ -36,18 +32,18 @@ namespace Calculator
 
 
             // 入力したキーによる分岐
-            switch (num3)
+            switch (ope)
             {
-                case 1:
+                case "+":
                     Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
                     break;
-                case 2:
+                case "-":
                     Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
                     break;
-                case 3:
+                case "*":
                     Console.WriteLine($"Your result: {num1} * {num2} = " + (num1 * num2));
                     break;
-                case 4:
+                case "/":
                     Console.WriteLine($"Your result: {num1} / {num2} = " + (num1 / num2));
                     break;
             }
